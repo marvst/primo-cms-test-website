@@ -3,33 +3,75 @@
     <head>
       <meta name="generator" content="Primo" />
       <!-- HEAD_svelte-1fgixuf_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><style>undefined</style><!-- HEAD_svelte-1fgixuf_END -->
-      <style>.section-container.svelte-1grguq5.svelte-1grguq5{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1grguq5.svelte-1grguq5{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-1grguq5.svelte-1grguq5{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1grguq5 nav.svelte-1grguq5{display:flex;gap:2rem}.desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1grguq5.svelte-1grguq5{display:flex
-}}.mobile-nav.svelte-1grguq5.svelte-1grguq5{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1grguq5.svelte-1grguq5{display:none
-}}#popup.svelte-1grguq5.svelte-1grguq5{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1grguq5 button#close.svelte-1grguq5{position:absolute;right:1rem;top:1rem}
-section.svelte-tioxrd.svelte-tioxrd{background:var(--color-brand);overflow:hidden}section.image-left.svelte-tioxrd figure.svelte-tioxrd{grid-column:1;grid-row:1}section.image-left.svelte-tioxrd .body.svelte-tioxrd{grid-column:2}.section-container.svelte-tioxrd.svelte-tioxrd{display:flex;flex-direction:column-reverse;gap:2rem}@media(min-width: 800px){.section-container.svelte-tioxrd.svelte-tioxrd{display:grid;grid-template-columns:1fr 1fr;place-items:center;gap:6rem;padding-block:6rem
-}}.body.svelte-tioxrd.svelte-tioxrd{color:var(--color-inverted);display:grid;place-items:start;padding-top:2rem}.body.svelte-tioxrd .headline.svelte-tioxrd{color:var(--color-heading);font-family:var(--font-heading);font-weight:700;font-size:clamp(2.75rem, 10vw, 3rem);line-height:1.1;margin-bottom:1.5rem}.body.svelte-tioxrd .subheading.svelte-tioxrd{font-weight:400;font-size:1.125rem;margin-bottom:2rem}.body.svelte-tioxrd .button.svelte-tioxrd{font-weight:500}figure.svelte-tioxrd.svelte-tioxrd{position:relative}figure.svelte-tioxrd img.svelte-tioxrd{border-radius:var(--border-radius);z-index:1;position:relative}</style>
+      <style>section.svelte-17t4z3x.svelte-17t4z3x{background:var(--color-background, black);color:var(--color-white,white)}.teasers.svelte-17t4z3x.svelte-17t4z3x{display:grid;gap:6rem}.teaser.svelte-17t4z3x.svelte-17t4z3x{display:grid;gap:1rem}.teaser.svelte-17t4z3x img.svelte-17t4z3x{width:100%;border-radius:var(--border-radius)}.teaser.svelte-17t4z3x .content-section.svelte-17t4z3x{display:grid;place-items:flex-start;padding:0}.teaser.svelte-17t4z3x .content-section .heading.svelte-17t4z3x{margin-bottom:1.25rem;margin-left:0;color:var(--color-white, white)}.teaser.svelte-17t4z3x .content-section .body.svelte-17t4z3x{margin-bottom:2rem}.teaser.svelte-17t4z3x .content-section a.button.svelte-17t4z3x{background-color:transparent;border:1.5px solid white}.teaser.svelte-17t4z3x .content-section a.button.svelte-17t4z3x:hover{box-shadow:0 0 0 2px white}@media(min-width: 800px){.teaser.svelte-17t4z3x.svelte-17t4z3x{grid-template-columns:1fr 1fr;place-items:center;gap:4rem
+
+    /* switch direction for even items */
+}.teaser.svelte-17t4z3x:nth-child(odd) img.svelte-17t4z3x{grid-row:1;grid-column:2}.teaser.svelte-17t4z3x:nth-child(even) img.svelte-17t4z3x{grid-row:1;grid-column:1}}@media(min-width: 1200px){section.svelte-17t4z3x.svelte-17t4z3x{gap:6rem}.teaser.svelte-17t4z3x.svelte-17t4z3x{gap:10rem}.heading.svelte-17t4z3x.svelte-17t4z3x{margin-bottom:5rem}.body.svelte-17t4z3x.svelte-17t4z3x{margin-bottom:2.5rem}}
+.section-container.svelte-is93z9.svelte-is93z9{max-width:1400px}.heading.svelte-is93z9.svelte-is93z9{text-align:center;margin-bottom:3rem}ul.cards.svelte-is93z9.svelte-is93z9{display:grid;place-items:center;gap:1rem}ul.cards.svelte-is93z9 li.svelte-is93z9{max-width:400px;padding:1rem 2rem}ul.cards.svelte-is93z9 li figure.svelte-is93z9{padding:0 2rem}ul.cards.svelte-is93z9 li figure img.svelte-is93z9{margin-bottom:2rem;width:100%;border-radius:var(--border-radius)}ul.cards.svelte-is93z9 li .info .details.svelte-is93z9{display:grid;text-align:center;margin-bottom:1rem}ul.cards.svelte-is93z9 li .info .details span.name.svelte-is93z9{font-weight:600;margin-bottom:0.25rem}ul.cards.svelte-is93z9 li .info .details span.title.svelte-is93z9{font-size:1rem}ul.cards.svelte-is93z9 li .info .social.svelte-is93z9{display:flex;justify-content:center;gap:1.5rem;font-size:1.5rem;color:var(--color-accent, rebeccapurple)}ul.cards.svelte-is93z9 li .info .social a.svelte-is93z9{transition:var(--transition, 0.1s transform)}ul.cards.svelte-is93z9 li .info .social a.svelte-is93z9:hover{transform:scale(1.1)}@media(min-width: 600px){ul.cards.svelte-is93z9.svelte-is93z9{grid-template-columns:1fr 1fr
+}}@media(min-width: 1000px){ul.cards.svelte-is93z9.svelte-is93z9{grid-template-columns:1fr 1fr 1fr
+}}
+footer.svelte-15kz5el.svelte-15kz5el{background:var(--color-background,black);color:white}.section-container.svelte-15kz5el.svelte-15kz5el{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4rem}.content.svelte-15kz5el.svelte-15kz5el{margin:initial;padding:0;line-height:1.1;color:white}.nav-items.svelte-15kz5el.svelte-15kz5el{display:flex;flex-wrap:wrap;gap:4rem}.nav-items.svelte-15kz5el ul.svelte-15kz5el{display:grid;gap:0.5rem}.nav-items.svelte-15kz5el ul .link.svelte-15kz5el{border-bottom:2px solid white}.nav-items.svelte-15kz5el ul .link.svelte-15kz5el:hover{border-color:transparent}.nav-items.svelte-15kz5el h3.svelte-15kz5el{font-weight:500;font-size:1.5rem;margin-bottom:1rem}</style>
     </head>
     <body id="page">
        
-<div class="section" id="section-ed2e9d4e"><header class="section-container svelte-1grguq5"><div class="desktop-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">duorama</a>
-    <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="">Home</a><a class="link svelte-1grguq5" href="/">About</a><a class="link svelte-1grguq5" href="/">Contact</a></nav></div>
-  <div class="mobile-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">duorama</a>
-    <button id="open" aria-label="Open mobile navigation"></button>
-    </div></header></div> 
-<div class="section" id="section-c99fa938"><div class="container-fluid min-vh-100 text-white bg-dark d-flex align-items-center justify-content-center"><h1>Heading</h1></div></div> 
-<div class="section" id="section-2aff26e6"><section class="svelte-tioxrd"><div class="section-container svelte-tioxrd"><div class="body svelte-tioxrd"><h1 class="headline svelte-tioxrd">Schedule Meetings in Minutes with Cali</h1>
-      <div class="subheading svelte-tioxrd">Get your meetings effortlessly organized with Cali. So you can spend more time on meeting people instead of scheduling meetings.</div>
-      <a href="/" class="button svelte-tioxrd">Get Started</a></div>
-    <figure class="svelte-tioxrd"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="" class="svelte-tioxrd"></figure></div></section></div> 
+<div class="section" id="section-7cf388d2"><nav class="navbar navbar-light bg-light"><a class="navbar-brand" href="#hero">Navbar</a></nav></div> 
+<div class="section" id="section-d6d11931"><section class="svelte-17t4z3x"><div class="section-container svelte-17t4z3x"><div class="teasers svelte-17t4z3x"><div class="teaser svelte-17t4z3x"><img src="https://images.unsplash.com/photo-1685189219324-a4ca49a306bd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2148&amp;q=80" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Community</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>We are a beacon of commitment towards preserving our forests. In the embrace of nature, we stand steadfast, advocating for the voiceless sentinels of our ecosystem. Together, we forge a path towards a greener tomorrow.</p><!-- HTML_TAG_END --></div>
+            <a class="button svelte-17t4z3x" href="/">Learn More
+              </a></div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://images.unsplash.com/photo-1685378751992-c9b2c6e85f61?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2831&amp;q=80" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Volunteering</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>Eager to leave a green footprint? Lend your hands to Lorem Ipsum Dolor. Each seed you sow, every forest you help clean, and every conversation you initiate about the importance of trees, echoes in our mission. Every action matters!</p><!-- HTML_TAG_END --></div>
+            <a class="button svelte-17t4z3x" href="/">Learn More
+              </a></div>
+        </div></div></div></section></div> 
+<div class="section" id="section-9da9253c"><section class="section-container svelte-is93z9"><h2 class="heading svelte-is93z9">Our Team</h2>
+  <ul class="cards svelte-is93z9"><li class="svelte-is93z9"><figure class="svelte-is93z9"><img alt="" src="https://images.unsplash.com/photo-1525992979185-b214b603e97f?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=987&amp;q=80" class="svelte-is93z9">
+        </figure>
+      <div class="info"><div class="details svelte-is93z9"><span class="name svelte-is93z9">Lisa Lane</span>
+          <span class="title svelte-is93z9">Designer</span></div>
+        <div class="social svelte-is93z9"><a href="/" aria-label="in" class="svelte-is93z9"> 
+            </a><a href="/" aria-label="consequat" class="svelte-is93z9"> 
+            </a>
+        </div></div>
+    </li><li class="svelte-is93z9"><figure class="svelte-is93z9"><img alt="" src="https://images.unsplash.com/photo-1440178536296-c1041e136dda?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2370&amp;q=80" class="svelte-is93z9">
+        </figure>
+      <div class="info"><div class="details svelte-is93z9"><span class="name svelte-is93z9">Talia Tuz</span>
+          <span class="title svelte-is93z9">Editor</span></div>
+        <div class="social svelte-is93z9"><a href="/" aria-label="amet" class="svelte-is93z9"> 
+            </a><a href="/" aria-label="aliqua" class="svelte-is93z9"> 
+            </a>
+        </div></div>
+    </li><li class="svelte-is93z9"><figure class="svelte-is93z9"><img alt="" src="https://images.unsplash.com/photo-1549068142-ffe6a519b2cd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2370&amp;q=80" class="svelte-is93z9">
+        </figure>
+      <div class="info"><div class="details svelte-is93z9"><span class="name svelte-is93z9">Gray Nelly</span>
+          <span class="title svelte-is93z9">Co-editor</span></div>
+        <div class="social svelte-is93z9"><a href="/" aria-label="quis" class="svelte-is93z9"> 
+            </a><a href="/" aria-label="occaecat" class="svelte-is93z9"> 
+            </a>
+        </div></div>
+    </li></ul></section></div> 
+<div class="section" id="section-f18b6dcb"><footer class="svelte-15kz5el"><div class="section-container svelte-15kz5el"><div class="content svelte-15kz5el"><!-- HTML_TAG_START --><h3 id="billiontreesbr">BillionTrees <br></h3>
+<p>321 Something St. Jackson, AL 20332</p><!-- HTML_TAG_END --></div>
+    <div class="nav-items svelte-15kz5el"><nav><h3 class="title svelte-15kz5el">About Us</h3>
+          <ul class="svelte-15kz5el"><li><a class="link svelte-15kz5el" href="/">blog</a>
+              </li><li><a class="link svelte-15kz5el" href="/">consectetur</a>
+              </li></ul>
+        </nav><nav><h3 class="title svelte-15kz5el">Get Involved</h3>
+          <ul class="svelte-15kz5el"><li><a class="link svelte-15kz5el" href="/">qui</a>
+              </li><li><a class="link svelte-15kz5el" href="/">ex</a>
+              </li></ul>
+        </nav></div></div></footer></div> 
 
       <script type="module">
-      import('/_symbols/3cf0bbb1-3dca-4569-88d9-2ee4dda05220.js')
+      import('/_symbols/2d56fb77-f1bf-492e-8ba7-748e94d55e66.js')
       .then(({default:App}) => {
         
             new App({
-              target: document.querySelector('#section-ed2e9d4e'),
+              target: document.querySelector('#section-9da9253c'),
               hydrate: true,
-              props: {"logo":{"image":{"alt":"","src":"https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg","url":"https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg","size":3},"title":"duorama"},"site_nav":[{"link":{"url":"","label":"Home","active":false}},{"link":{"url":"/","label":"About"}},{"link":{"url":"/","label":"Contact"}}]}
+              props: {"heading":"Our Team","people":[{"name":"Lisa Lane","image":{"alt":"","src":"https://images.unsplash.com/photo-1525992979185-b214b603e97f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80","url":"https://images.unsplash.com/photo-1525992979185-b214b603e97f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80","size":null},"title":"Designer","social_links":[{"icon":"mdi:twitter","link":{"url":"/","label":"in"}},{"icon":"mdi:twitter","link":{"url":"/","label":"consequat"}}]},{"name":"Talia Tuz","image":{"alt":"","src":"https://images.unsplash.com/photo-1440178536296-c1041e136dda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80","url":"https://images.unsplash.com/photo-1440178536296-c1041e136dda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80","size":null},"title":"Editor","social_links":[{"icon":"mdi:twitter","link":{"url":"/","label":"amet"}},{"icon":"mdi:twitter","link":{"url":"/","label":"aliqua"}}]},{"name":"Gray Nelly","image":{"alt":"","src":"https://images.unsplash.com/photo-1549068142-ffe6a519b2cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80","url":"https://images.unsplash.com/photo-1549068142-ffe6a519b2cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80","size":null},"title":"Co-editor","social_links":[{"icon":"Laboris magna et","link":{"url":"/","label":"quis"}},{"icon":"Magna officia commodo","link":{"url":"/","label":"occaecat"}}]}]}
             })
           
       })
